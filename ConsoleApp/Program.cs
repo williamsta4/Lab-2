@@ -1,13 +1,45 @@
-﻿Console.WriteLine("Please enter your first number: ");
-string input1Str = Console.ReadLine();
+﻿string input = String.Empty;
+int num1, num2;
+Console.WriteLine("Add +, Subtract -, Mutiply *, Divide /, % Modulus %");
+Console.WriteLine("Type 'esc' to quit");
+input = Console.ReadLine();
+while (input!= "esc")
+{  
+    Console.WriteLine("Please enter your first number: ");
+    num1 = Convert.ToInt32(Console.ReadLine());
+    switch (input)
+    {
+        case "+":
+            Console.WriteLine("Enter your second number: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"= {num1 + num2}");
+            break;
 
-Console.WriteLine("Please enter your second number: ");
-string input2Str = Console.ReadLine();
+        case "-":
+            Console.WriteLine("Enter your second number: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"= {num1 - num2}");
+            break;
 
-int input1 = int.Parse(input1Str);
-int input2 = int.Parse(input2Str);
-int sum = (input1 + input2);
+        case "*":
+            Console.WriteLine("Enter your second number: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"= {num1 * num2}");
+            break;
 
-Console.WriteLine($"The first number was: {input1}");
-Console.WriteLine($"The second number was: {input2}");
-Console.WriteLine($"The sum is: {sum}");
+        case "/":
+            Console.WriteLine("Enter your second number: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"= {num1 / num2}");
+            break;
+
+        case "%":
+            Console.WriteLine("Enter your second number: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"= {num1 % num2}");
+            break;
+    }
+    Console.WriteLine("Add +, Subtract -, Mutiply *, Divide /, % Modulus %");
+    Console.WriteLine("Type 'esc' to quit");
+    input = Console.ReadLine();
+} 
